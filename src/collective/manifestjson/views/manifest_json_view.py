@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
-import json
-
 from plone import api
 from Products.Five.browser import BrowserView
-from zope.interface import Interface, implementer
+from zope.interface import implementer
+from zope.interface import Interface
+
+import json
 
 
 class IManifestJsonView(Interface):
@@ -20,8 +21,6 @@ class ManifestJsonView(BrowserView):
         # manifest_enabled = api.portal.get_registry_record(
         #     name="collective.manifestjson.manifest_settings.manifest_enabled"
         # )
-        self.request.RESPONSE.setHeader('Content-Type', "application/json")
+        self.request.RESPONSE.setHeader("Content-Type", "application/json")
         template = json.dumps(manifest_content)
         return template
-
-

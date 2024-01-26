@@ -1,16 +1,14 @@
 # -*- coding: utf-8 -*-
-import unittest
-
+from collective.manifestjson.testing import COLLECTIVE_MANIFESTJSON_FUNCTIONAL_TESTING
+from collective.manifestjson.testing import COLLECTIVE_MANIFESTJSON_INTEGRATION_TESTING
+from collective.manifestjson.views.manifest_json_view import IManifestJsonView
 from plone import api
-from plone.app.testing import TEST_USER_ID, setRoles
+from plone.app.testing import setRoles
+from plone.app.testing import TEST_USER_ID
 from zope.component import getMultiAdapter
 from zope.interface.interfaces import ComponentLookupError
 
-from collective.manifestjson.testing import (
-    COLLECTIVE_MANIFESTJSON_FUNCTIONAL_TESTING,
-    COLLECTIVE_MANIFESTJSON_INTEGRATION_TESTING,
-)
-from collective.manifestjson.views.manifest_json_view import IManifestJsonView
+import unittest
 
 
 class ViewsIntegrationTest(unittest.TestCase):

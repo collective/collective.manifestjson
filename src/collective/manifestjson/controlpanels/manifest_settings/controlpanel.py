@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
+from collective.manifestjson import _
+from collective.manifestjson.interfaces import ICollectiveManifestjsonLayer
 from plone import schema
-from plone.app.registry.browser.controlpanel import (
-    ControlPanelFormWrapper,
-    RegistryEditForm,
-)
+from plone.app.registry.browser.controlpanel import ControlPanelFormWrapper
+from plone.app.registry.browser.controlpanel import RegistryEditForm
 from plone.app.z3cform.widget import SingleCheckBoxBoolFieldWidget
 from plone.autoform import directives
 from plone.restapi.controlpanels import RegistryConfigletPanel
@@ -12,18 +12,15 @@ from plone.z3cform import layout
 from zope.component import adapter
 from zope.interface import Interface
 
-from collective.manifestjson import _
-from collective.manifestjson.interfaces import ICollectiveManifestjsonLayer
-
 
 class IManifestSettings(Interface):
     directives.widget(manifest_enables=SingleCheckBoxBoolFieldWidget)
     manifest_enabled = schema.Bool(
         title=_(
-            u'manifest.json enabled',
+            "manifest.json enabled",
         ),
         description=_(
-            u'You can enable or disable the manifest.json view',
+            "You can enable or disable the manifest.json view",
         ),
         required=False,
         default=True,
@@ -84,47 +81,47 @@ class IManifestSettings(Interface):
             "start_url": "/",
             "icons": [
                 {
-                "src": "images/icons/icon-72x72.png",
-                "sizes": "72x72",
-                "type": "image/png"
+                    "src": "images/icons/icon-72x72.png",
+                    "sizes": "72x72",
+                    "type": "image/png",
                 },
                 {
-                "src": "images/icons/icon-96x96.png",
-                "sizes": "96x96",
-                "type": "image/png"
+                    "src": "images/icons/icon-96x96.png",
+                    "sizes": "96x96",
+                    "type": "image/png",
                 },
                 {
-                "src": "images/icons/icon-128x128.png",
-                "sizes": "128x128",
-                "type": "image/png"
+                    "src": "images/icons/icon-128x128.png",
+                    "sizes": "128x128",
+                    "type": "image/png",
                 },
                 {
-                "src": "images/icons/icon-144x144.png",
-                "sizes": "144x144",
-                "type": "image/png"
+                    "src": "images/icons/icon-144x144.png",
+                    "sizes": "144x144",
+                    "type": "image/png",
                 },
                 {
-                "src": "images/icons/icon-152x152.png",
-                "sizes": "152x152",
-                "type": "image/png"
+                    "src": "images/icons/icon-152x152.png",
+                    "sizes": "152x152",
+                    "type": "image/png",
                 },
                 {
-                "src": "images/icons/icon-192x192.png",
-                "sizes": "192x192",
-                "type": "image/png"
+                    "src": "images/icons/icon-192x192.png",
+                    "sizes": "192x192",
+                    "type": "image/png",
                 },
                 {
-                "src": "images/icons/icon-384x384.png",
-                "sizes": "384x384",
-                "type": "image/png"
+                    "src": "images/icons/icon-384x384.png",
+                    "sizes": "384x384",
+                    "type": "image/png",
                 },
                 {
-                "src": "images/icons/icon-512x512.png",
-                "sizes": "512x512",
-                "type": "image/png"
-                }
+                    "src": "images/icons/icon-512x512.png",
+                    "sizes": "512x512",
+                    "type": "image/png",
+                },
             ],
-            "splash_pages": None
+            "splash_pages": None,
         },
         required=True,
     )
