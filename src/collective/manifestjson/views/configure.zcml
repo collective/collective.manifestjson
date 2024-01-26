@@ -7,7 +7,7 @@
  <!-- -*- extra stuff goes here -*- -->
 
   <browser:page
-    name="manifest-json"
+    name="manifest.json"
     for="*"
     class=".manifest_json_view.ManifestJsonView"
     permission="zope2.View"

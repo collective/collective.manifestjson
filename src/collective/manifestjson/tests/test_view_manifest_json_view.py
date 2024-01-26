@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
-from collective.manifestjson.testing import COLLECTIVE_MANIFESTJSON_FUNCTIONAL_TESTING
-from collective.manifestjson.testing import COLLECTIVE_MANIFESTJSON_INTEGRATION_TESTING
-from collective.manifestjson.views.manifest_json_view import IManifestJsonView
+import unittest
+
 from plone import api
-from plone.app.testing import setRoles
-from plone.app.testing import TEST_USER_ID
+from plone.app.testing import TEST_USER_ID, setRoles
 from zope.component import getMultiAdapter
 from zope.interface.interfaces import ComponentLookupError
 
-import unittest
+from collective.manifestjson.testing import (
+    COLLECTIVE_MANIFESTJSON_FUNCTIONAL_TESTING,
+    COLLECTIVE_MANIFESTJSON_INTEGRATION_TESTING,
+)
+from collective.manifestjson.views.manifest_json_view import IManifestJsonView
 
 
 class ViewsIntegrationTest(unittest.TestCase):
@@ -23,7 +25,7 @@ class ViewsIntegrationTest(unittest.TestCase):
 
     def test_manifest_json_is_registered(self):
         view = getMultiAdapter(
-            (self.portal["other-folder"], self.portal.REQUEST), name="manifest-json"
+            (self.portal["other-folder"], self.portal.REQUEST), name="manifest.json"
         )
         self.assertTrue(IManifestJsonView.providedBy(view))
 
@@ -31,7 +33,7 @@ class ViewsIntegrationTest(unittest.TestCase):
         view_found = True
         try:
             view = getMultiAdapter(
-                (self.portal["front-page"], self.portal.REQUEST), name="manifest-json"
+                (self.portal["front-page"], self.portal.REQUEST), name="manifest.json"
             )
         except ComponentLookupError:
             view_found = False
