@@ -36,20 +36,18 @@ Allows to add manifest configuration in control panel and provides a view to ren
 Features
 --------
 
-- Can be bullet points
+- provides a control panel where one can configure the content of a manifest.json file
+- allows enabling/disabling the manifest.json in HTML header
 
 
-Examples
---------
 
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
+Usage
+-----
 
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
+- Install and enable the addon
+- Configure your manifest in the Manifest settings control panel
+- Make sure you have the referenced image folder and icons added and published, be default `/images/icons`
+- Open the website with you smartphone and select `Add to Home Screen` (Chrome) or `Install` (Firefox) and place the website as an app on your home screen.
 
 
 Translations
@@ -57,7 +55,7 @@ Translations
 
 This product has been translated into
 
-- Klingon (thanks, K'Plai)
+- German (Maik Derstappen - MrTango)
 
 
 Installation
