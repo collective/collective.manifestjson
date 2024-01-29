@@ -77,7 +77,7 @@ and then running ``bin/buildout``
 Authors
 -------
 
-Provided by awesome people ;)
+This add-on was build by `Derico <https://derico.de>`_ [MrTango].
 
 
 Contributors
@@ -93,14 +93,12 @@ Contribute
 
 - Issue Tracker: https://github.com/collective/collective.manifestjson/issues
 - Source Code: https://github.com/collective/collective.manifestjson
-- Documentation: https://docs.plone.org/foo/bar
 
 
 Support
 -------
 
 If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
 
 
 License
