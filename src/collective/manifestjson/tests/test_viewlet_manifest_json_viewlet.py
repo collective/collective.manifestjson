@@ -1,16 +1,18 @@
 # -*- coding: utf-8 -*-
-from collective.manifestjson.interfaces import ICollectiveManifestjsonLayer
-from collective.manifestjson.testing import COLLECTIVE_MANIFESTJSON_FUNCTIONAL_TESTING
-from collective.manifestjson.testing import COLLECTIVE_MANIFESTJSON_INTEGRATION_TESTING
+import unittest
+
 from plone import api
-from plone.app.testing import setRoles
-from plone.app.testing import TEST_USER_ID
+from plone.app.testing import TEST_USER_ID, setRoles
 from Products.Five.browser import BrowserView
 from zope.component import queryMultiAdapter
 from zope.interface import alsoProvides
 from zope.viewlet.interfaces import IViewletManager
 
-import unittest
+from collective.manifestjson.interfaces import ICollectiveManifestjsonLayer
+from collective.manifestjson.testing import (
+    COLLECTIVE_MANIFESTJSON_FUNCTIONAL_TESTING,
+    COLLECTIVE_MANIFESTJSON_INTEGRATION_TESTING,
+)
 
 
 class ViewletIntegrationTest(unittest.TestCase):
@@ -27,7 +29,7 @@ class ViewletIntegrationTest(unittest.TestCase):
 
     def test_manifest_json_viewlet_is_registered(self):
         view = BrowserView(self.portal["other-document"], self.request)
-        manager_name = "plone.abovecontenttitle"
+        manager_name = "plone.htmlhead.links"
         alsoProvides(self.request, ICollectiveManifestjsonLayer)
         manager = queryMultiAdapter(
             (self.portal["other-document"], self.request, view),

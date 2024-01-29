@@ -8,8 +8,8 @@
 
   <browser:viewlet
      name="manifest-json-viewlet"
-     for="plone.app.contenttypes.interfaces.IDocument"
-     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     for="*"
+     manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
      layer="collective.manifestjson.interfaces.ICollectiveManifestjsonLayer"
      class=".manifest_json_viewlet.ManifestJsonViewlet"
      template="manifest-json-viewlet.pt"

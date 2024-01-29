@@ -1,3 +1,2 @@
-<div class="days_to_conf">
-    ${view/message}
-</div>
+<link tal:condition="view/enabled"
+        rel="manifest" href="${view/portal_url}/manifest.json">
