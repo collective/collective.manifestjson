@@ -16,7 +16,7 @@ long_description = "\n\n".join(
 
 setup(
     name="collective.manifestjson",
-    version="1.0b1",
+    version="1.0b2.dev0",
     description="Allows to add manifest configuration in control panel and provides a view to render it as manifest.json",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
